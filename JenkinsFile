@@ -8,9 +8,19 @@ pipeline{
                        credentialsId: 'aws-keys',
                      accessKeyVariable: 'AWS_ACCESS_KEY_ID',
                       secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
-             sh 'aws s3 cp s3://virat.kohli/main.tf s3://sachin.tendulkar/main.tf'
+             sh 'aws s3 cp s3://rupesh.ghayal/my-new-photo.jpeg s3://rohit.sharma'
+
    }
+
+}
+
+ }
+stage("move object from one s3 bucket to another")
+     {  
+steps {
+
+sh 'aws s3 mv s3://rupesh.ghayal/my-add-image-4.PNG  s3://rohit.sharma'
+}
 }
  }
-}
 }
